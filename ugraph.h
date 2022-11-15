@@ -18,6 +18,8 @@
 #include <vector>
 #include <iostream>
 
+int counter = 0;
+
 /***********************************************************/
 /********************** UnweightedGraph ********************/
 /***********************************************************/
@@ -197,6 +199,7 @@ void UListGraph<Vertex>::addEdge(Vertex from, Vertex to) {
 	if (!direction) {
 		edges[to].insert(from);
 	}
+  counter++;
 }
 
 template <class Vertex>
@@ -288,5 +291,6 @@ std::set<Vertex> bfs(const Vertex& start, const UnweightedGraph<Vertex>* graph) 
 	}
 	return visited;
 }
+
 
 #endif
